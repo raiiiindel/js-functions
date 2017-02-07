@@ -29,8 +29,6 @@ console.log(testGreeting); // printing the output value of the function.
 var bango1 = 3;
 var bango2 = 6;
 
-
-
 /*
  * #2
  * Function - add
@@ -50,7 +48,6 @@ function add(num1, num2){
   return num1 + num2;
 }
 var sum = add(bango1, bango2);
-
 console.log (sum);
 
 
@@ -67,9 +64,9 @@ console.log (sum);
  * Invoke the function and assign it to a variable named `difference`.
  * Console.log `difference` to test your code.
 */ 
+
 function subtract(num1, num2){
 	return num1 - num2;
-
 }
 var difference = subtract(bango1, bango2);
 console.log (difference);
@@ -109,6 +106,7 @@ console.log (product);
  * Invoke the function and assign it to a variable named `quotient`.
  * Console.log `quotient` to test your code.
 */
+
 function divide(num1, num2){
 	return num1 / num2;
 }
@@ -167,7 +165,7 @@ function checkProduct(){
 	return sum * product;
 
 }
-console.log (checkProduct(sum, product));
+console.log (checkProduct());
 
 
 /*
@@ -183,7 +181,7 @@ console.log (checkProduct(sum, product));
 function checkQuotient(){
 	return product * quotient;
 }
-console.log (checkQuotient(product, quotient));
+console.log (checkQuotient());
 
 
 /*
@@ -205,13 +203,14 @@ console.log (checkQuotient(product, quotient));
  * This function will add the first two parameters together. Then with the sum of that operation, subtract it from the third parameter. PLEASE USE YOUR PREVIOUS FUNCTIONS FOR THIS EXERCISE. 
  * Console.log your result.
 */ 
-var bango3 = 12
-var bango4 = 10
-var bango5 = 14
+
+var bango3 = 12;
+var bango4 = 10;
+var bango5 = 14;
 
 function addThenSubtract(num1, num2, num3){
-  var sum = num1 + num2;
-  return sum - num3;
+  
+  return subtract(add(num1, num2), num3);
 }
 console.log (addThenSubtract(bango3, bango4, bango5));
 
@@ -229,9 +228,10 @@ console.log (addThenSubtract(bango3, bango4, bango5));
  * This function will multiply the first two parameters together. Then with the product of that operation, divide it from the third parameter. PLEASE USE YOUR PREVIOUS FUNCTIONS FOR THIS EXERCISE. 
  * Console.log your result.
 */ 
+
 function multiplyThenDivide(num1, num2, num3){
-  var product = num1 * num2;
-  return product / num3;
+  
+  return divide(multiply(num1, num2), num3);
 }
 console.log (multiplyThenDivide(bango3, bango4, bango5));
 
@@ -288,6 +288,8 @@ console.log (eatFood("Ulu", "Oclit", "Musubi's"));
  * Create a function that will take in a parameter named `inches`. This function will convert inches to centimeters(cm).
  * Console.log your result. 
 */
+
+
 function shoeSize(inches){
   return "Your shoe size in cm is " + inches * 2.54;
  
@@ -305,7 +307,7 @@ console.log (shoeSize(9));
  * Example output: "BELIEVE YOU CAN AND YOU'RE HALFWAY THERE."
 */
  function allCaps(str){
-  return str.toUpperCase()
+  return str.toUpperCase();
 }
 console.log (allCaps("homework"));
 
@@ -317,9 +319,12 @@ console.log (allCaps("homework"));
  * This function will capitalize only the first letter in the variable phase above. 
  * Console.log your result.
 */
+
+
 //I need help
+
 function oneCap(str){
-  return str[0].toUpperCase();
+  return str[0].toUpperCase() + str.slice(1);
 }
 console.log (oneCap("capitalization"));
 
@@ -335,10 +340,11 @@ console.log (oneCap("capitalization"));
  * Store the return value to a variable named `canDrink`. Console.log your result.
  */
 
+
 function verifyDrinkingAge(age){
   return age>21;
 }
-var canDrink = verifyDrinkingAge(24)
+var canDrink = verifyDrinkingAge(24);
 console.log (canDrink);
 
 /**
@@ -347,8 +353,9 @@ console.log (canDrink);
  * Create a function named throwParty. This function will check the value stored in the `canDrink` variable in the previous exercise. If the value is true, it will return the message "Cheee Hoo! We going to da party!" If false, then it will return the message "Meh, see you at Starbucks." Store the return value to a variable named `canParty`. Console.log your result.
  */
 
+
 function throwParty(){
-  return "Chee hoo! We going to da party!"
+  return "Chee hoo! We going to da party!";
 }
 
 
