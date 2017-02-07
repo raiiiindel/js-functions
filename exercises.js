@@ -342,9 +342,13 @@ console.log (oneCap("capitalization"));
 
 
 function verifyDrinkingAge(age){
-  return age>21;
+  if(age >= 21){
+    return true;
+  }else{
+    return false;
+  }
 }
-var canDrink = verifyDrinkingAge(24);
+var canDrink = verifyDrinkingAge(19);
 console.log (canDrink);
 
 /**
@@ -355,8 +359,14 @@ console.log (canDrink);
 
 
 function throwParty(){
-  return "Chee hoo! We going to da party!";
+  if(canDrink === true){
+    return "Chee hoo! We going to da party!";
+}else{
+  return "Meh, see you at Starbucks."; 
 }
+}
+console.log (throwParty());
+
 
 
 
